@@ -1,0 +1,10 @@
+dist/
+build/
+coverage/
+node_modules/
+.npm/
+.ts-cache/
+.yarn-cache/
+*.log
+.vscode/
+.idea/

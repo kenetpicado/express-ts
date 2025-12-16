@@ -1,0 +1,16 @@
+/node_modules
+*.log
+*.sqlite
+.DS_Store
+.npm
+.yarn-cache
+package-lock.json
+.env
+.env.local
+/dist
+/build
+/coverage
+.ts-cache
+.vscode/
+.idea/
+*.exe
