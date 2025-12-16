@@ -1,6 +1,6 @@
 import express from 'express';
 import helmet from 'helmet';
-import apiRoutes from './routes/api/routes.js';
+import v1 from './routes/api/v1/index.js';
 import type { Request, Response } from 'express';
 
 import notFoundMiddleware from "./middleware/notFound.middleware.js";
@@ -17,7 +17,7 @@ app.get('/', (req: Request, res: Response) => {
   });
 });
 
-app.use('/api', apiRoutes)
+app.use('/api/v1', v1)
 
 app.use(notFoundMiddleware);
 
