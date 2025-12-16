@@ -6,6 +6,12 @@
     "rootDir": "./src",
     "outDir": "./dist",
 
+    "baseUrl": "./src",
+    "paths": {
+      // Definimos el alias @/ que apunta a cualquier cosa dentro de 'src'
+      "@/*": ["*"]
+    },
+
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",

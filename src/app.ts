@@ -3,8 +3,8 @@ import helmet from 'helmet';
 import v1 from './routes/api/v1/index.js';
 import type { Request, Response } from 'express';
 
-import notFoundMiddleware from "./middleware/notFound.middleware.js";
-import errorHandlerMiddleware from "./middleware/errorHandler.middleware.js";
+import { notFoundMiddleware } from './middleware/notFound.middleware.js';
+import { errorHandlerMiddleware } from './middleware/errorHandler.middleware.js';
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.get('/', (req: Request, res: Response) => {
   });
 });
 
-app.use('/api/v1', v1)
+app.use('/api/v1', v1);
 
 app.use(notFoundMiddleware);
 
