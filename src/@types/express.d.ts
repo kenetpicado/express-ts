@@ -1,6 +1,6 @@
 interface IAuth {
   id: number;
-  email: string;
+  username: string;
 }
 
 declare namespace Express {

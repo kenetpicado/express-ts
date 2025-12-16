@@ -4,7 +4,7 @@ import type { Request, Response } from 'express';
 const router = express.Router();
 
 router.get('/profile', (req: Request, res: Response) => {
-  res.json({ message: 'Ruta de autenticación funcionando' });
+  res.json({ ...req.auth });
 });
 
 export default router;
