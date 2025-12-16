@@ -18,29 +18,44 @@ The app reads these environment variables at runtime (add a .env or set them in 
 - PORT — Port to run the server on (default: 3000)
 - NODE_ENV — Environment mode (development|production)
 
-(If you want to load a .env file in development, install `dotenv` and load it from `src/app.ts`.)
+If you want to load a .env file in development, install `dotenv` and load it from `src/app.ts` (or `src/index.ts` depending on the project entry).
 
-## Setup
+## Quick start
 
 1. Install dependencies
 
    npm install
 
-2. Run in development (ts/node with watch)
+2. Create a .env file (optional)
+
+   Example .env:
+
+   PORT=3000
+   NODE_ENV=development
+
+3. Run in development (ts-node with watcher)
 
    npm run dev
 
-3. Build
+4. Build
 
    npm run build
 
-4. Run built output
+5. Run built output
 
    npm start
 
-5. Format source
+6. Format source
 
    npm run format
+
+## Usage
+
+Start the server and open http://localhost:3000 (or your PORT). Example request:
+
+  curl http://localhost:3000/health
+
+(Replace `/health` with any route provided by the app.)
 
 ## Project structure
 
@@ -52,6 +67,10 @@ The app reads these environment variables at runtime (add a .env or set them in 
 ## Notes
 
 - tsconfig.json is configured with `module: "nodenext"` and `strict: true` and emits declaration files.
+
+## Contributing
+
+Contributions and improvements are welcome. Open a PR with a clear description of changes.
 
 ## License
 
